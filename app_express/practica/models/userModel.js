@@ -7,11 +7,14 @@ var mongoose = require("mongoose");
 
 //Creo el esquema
 
-var userSchema = mongoose.Schema({
+var anuncioSchema = mongoose.Schema({
     name: String,
-    age: Number
+    venta: Boolean,
+	precio: Number,
+	foto: String,
+	tags: [String]
 });
-userSchema.statics.list = function(sort, cb) {
+anuncioSchema.statics.list = function(sort, cb) {
 	//preparamos la query sin ejecutarla (no ponemos callback a find)
     var query = User.find({});
     //añadimos más parámetros a la query
@@ -31,7 +34,7 @@ userSchema.statics.list = function(sort, cb) {
 
 //Lo registro en mongoose
 
-var User = mongoose.model("User", userSchema);
+var User = mongoose.model("User", anuncioSchema);
 
 
 

@@ -1,0 +1,14 @@
+<html >
+<head>
+
+</head>
+<body>
+	<% users.forEach(function(user){ %>
+		Nombre<input type="text" value="<%= user.nombre %> "></input>
+		Venta<input type="text" value="<%= user.venta %> "></input>
+		Precio<input type="text" value="<%= user.precio %> "></input>
+		Foto<input type="text" value="<%= user.foto %> "></input>
+		Tags<input type="text" value="<%= user.tags[] %> "></input>
+		<% }) %>
+</body>
+</html>
